@@ -31,6 +31,9 @@ class Bundle {
 			// Execute service
 			Service::complete('router:route', $path);
 		}
+		catch(Completion $c) {
+			die;
+		}
 		catch(IncompleteException $c) {
 			
 			// No path matched
